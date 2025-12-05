@@ -34,14 +34,31 @@
             text-shadow: 0 0 10px red;
         }
 
-        .container {
-            animation: fadeIn 2.5s ease-in-out;
+        .tagline {
+            font-size: 22px;
+            margin-top: 15px;
+            color: #ff2222;
+            letter-spacing: 4px;
+            font-style: italic;
+            text-shadow: 0 0 8px darkred, 0 0 15px red;
+            animation: slash 2s ease-in-out infinite alternate;
         }
 
         @keyframes fadeIn {
             from { opacity: 0; transform: scale(0.9); }
             to   { opacity: 1; transform: scale(1); }
         }
+
+        .container {
+            animation: fadeIn 2.5s ease-in-out;
+        }
+
+        /* Claw effect animation */
+        @keyframes slash {
+            from { letter-spacing: 3px; }
+            to { letter-spacing: 8px; }
+        }
+
     </style>
 </head>
 
@@ -49,6 +66,7 @@
     <div class="container">
         <h1>OG</h1>
         <p>Ojas Ghambhira</p>
+        <div class="tagline">Tiger's Claw</div>
     </div>
 </body>
 </html>
