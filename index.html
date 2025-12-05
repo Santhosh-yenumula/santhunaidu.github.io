@@ -35,13 +35,24 @@
         }
 
         .tagline {
-            font-size: 22px;
-            margin-top: 15px;
-            color: #ff2222;
+            font-size: 28px;
+            margin-top: 20px;
             letter-spacing: 4px;
             font-style: italic;
-            text-shadow: 0 0 8px darkred, 0 0 15px red;
-            animation: slash 2s ease-in-out infinite alternate;
+            font-weight: bold;
+            background: linear-gradient(90deg, #FFD700, #FFB300, #FFDF00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 
+                0 0 10px rgba(255, 215, 0, 0.7),
+                0 0 20px rgba(255, 215, 0, 0.9),
+                0 0 30px rgba(255, 215, 0, 1);
+            animation: glow 2s infinite alternate ease-in-out;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 8px gold, 0 0 15px orange; }
+            to   { text-shadow: 0 0 20px gold, 0 0 35px orange; }
         }
 
         @keyframes fadeIn {
@@ -52,13 +63,6 @@
         .container {
             animation: fadeIn 2.5s ease-in-out;
         }
-
-        /* Claw effect animation */
-        @keyframes slash {
-            from { letter-spacing: 3px; }
-            to { letter-spacing: 8px; }
-        }
-
     </style>
 </head>
 
